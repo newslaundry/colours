@@ -1,0 +1,31 @@
+{
+  "name": "@newslaundry/colours",
+  "version": "0.0.1",
+  "description": "A beautiful and accessible colour system for Newslaundry",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "rollup --config && pnpm build:css",
+    "build:css": "node ./scripts/build-css.js",
+    "clean": "rm -rf scripts/build-css.js && rm -rf node_modules && rm -rf dist"
+  },
+  "keywords": [
+    "design system",
+    "colours"
+  ],
+  "author": "Rishabh Dixit <rishabh@newslaundry.com>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@rollup/plugin-typescript": "^11.1.2",
+    "@types/node": "^18.17.0",
+    "rollup": "^3.28.1",
+    "tslib": "^2.6.2",
+    "typescript": "^5.1.6"
+  },
+  "packageManager": "pnpm@8.6.10"
+}
